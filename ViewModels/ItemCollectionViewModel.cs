@@ -14,11 +14,11 @@ namespace WonderGraphGeneratorWpf.ViewModels
     {
         private readonly ObservableCollection<ItemViewModel> data = new ObservableCollection<ItemViewModel>()
         {
-            new ItemViewModel(){IsEnabled=true, Value=40, Label="なるほど", Color = Color.FromRgb(0xa8, 0x89, 0x0a)},
-            new ItemViewModel(){IsEnabled=true, Value=60, Label="よくわかる", Color = Color.FromRgb(0xa1, 0x35, 0x2a)},
-            new ItemViewModel(){IsEnabled=true, Value=30, Label="そうですか", Color = Color.FromRgb(0x24, 0x6a, 0x99)},
-            new ItemViewModel(){IsEnabled=true, Value=40, Label="ふーん", Color = Color.FromRgb(0x20, 0x8e, 0x4f)},
-            new ItemViewModel(){IsEnabled=true, Value=10, Label="その他", Color = Color.FromRgb(0x84, 0x88, 0x8b)},
+            new ItemViewModel(){IsEnabled=true, Value=40, Label="なるほど", Color1 = "#a8890a", Color2 = "#f3c50f"},
+            new ItemViewModel(){IsEnabled=true, Value=60, Label="よくわかる", Color1 = "#a1352a", Color2 = "#e94c3c"},
+            new ItemViewModel(){IsEnabled=true, Value=30, Label="そうですか", Color1 = "#246a99", Color2 = "#3499dd"},
+            new ItemViewModel(){IsEnabled=true, Value=40, Label="ふーん", Color1 = "#208e4f", Color2 = "#2ece72"},
+            new ItemViewModel(){IsEnabled=true, Value=10, Label="その他", Color1 = "#84888b", Color2 = "#bec4c3"},
         };
 
         event NotifyCollectionChangedEventHandler INotifyCollectionChanged.CollectionChanged
