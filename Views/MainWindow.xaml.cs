@@ -29,12 +29,30 @@ namespace WonderGraphGeneratorWpf.Views
 
         private void SaveAs_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
+            MainViewModel viewModel = this.DataContext as MainViewModel;
+            if (viewModel == null)
+                return;
 
+            ICommand command = viewModel.SaveAsCommand;
+            if (command == null)
+                return;
+
+            e.Handled = true;
+            e.CanExecute = command.CanExecute(this.viewPort);
         }
 
         private void SaveAs_Executed(object sender, ExecutedRoutedEventArgs e)
         {
+            MainViewModel viewModel = this.DataContext as MainViewModel;
+            if (viewModel == null)
+                return;
 
+            ICommand command = viewModel.SaveAsCommand;
+            if (command == null)
+                return;
+
+            e.Handled = true;
+            command.Execute(this.viewPort);
         }
 
         private void Close_Executed(object sender, ExecutedRoutedEventArgs e)

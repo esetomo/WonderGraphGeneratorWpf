@@ -82,7 +82,7 @@
                 <ColumnDefinition Width="200"/>
             </Grid.ColumnDefinitions>
             <Border Background="#ddddcc" Grid.Column="0" Margin="0,0,4,0">
-                <Viewport3D>
+                <Viewport3D Name="viewPort">
                     <Viewport3D.Camera>
                         <PerspectiveCamera LookDirection="0 0 -1" FieldOfView="60">
                             <PerspectiveCamera.Transform>
